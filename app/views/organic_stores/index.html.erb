@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organic Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Itemno</th>
+      <th>Item</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Ddate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organic_stores.each do |organic_store| %>
+      <tr>
+        <td><%= organic_store.ITEMNO %></td>
+        <td><%= organic_store.ITEM %></td>
+        <td><%= organic_store.QTY %></td>
+        <td><%= organic_store.PRICE %></td>
+        <td><%= organic_store.DDATE %></td>
+        <td><%= link_to 'Show', organic_store %></td>
+        <td><%= link_to 'Edit', edit_organic_store_path(organic_store) %></td>
+        <td><%= link_to 'Destroy', organic_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organic Store', new_organic_store_path %>

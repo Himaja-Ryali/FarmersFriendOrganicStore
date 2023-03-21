@@ -1,0 +1,42 @@
+<%= form_with(model: organic_store) do |form| %>
+  <% if organic_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(organic_store.errors.count, "error") %> prohibited this organic_store from being saved:</h2>
+
+      <ul>
+        <% organic_store.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ITEMNO %>
+    <%= form.number_field :ITEMNO %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ITEM %>
+    <%= form.text_field :ITEM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :QTY %>
+    <%= form.number_field :QTY %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PRICE %>
+    <%= form.number_field :PRICE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DDATE %>
+    <%= form.date_select :DDATE %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

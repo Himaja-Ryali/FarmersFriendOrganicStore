@@ -1,0 +1,2 @@
+class OrganicStore < ApplicationRecord
+end
