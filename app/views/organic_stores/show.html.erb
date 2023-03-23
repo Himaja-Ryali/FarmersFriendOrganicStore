@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Itemno:</strong>
+  <%= @organic_store.ITEMNO %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @organic_store.ITEM %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @organic_store.QTY %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @organic_store.PRICE %>
+</p>
+
+<p>
+  <strong>Ddate:</strong>
+  <%= @organic_store.DDATE %>
+</p>
+
+<%= link_to 'Edit', edit_organic_store_path(@organic_store) %> |
+<%= link_to 'Back', organic_stores_path %>

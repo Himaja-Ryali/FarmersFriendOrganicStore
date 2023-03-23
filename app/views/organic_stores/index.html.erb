@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organic Stores</h1>
+
+<h2> Products </h2>
+<table class="table">
+  <thead>
+    <tr>
+      
+      
+      <th scope="col">Itemno</th>
+      <th scope="col">Item</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Price</th>
+      <th scope="col">Ddate</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @organic_stores.each do |organic_store| %>
+    <tr>
+      <td><%= organic_store.ITEMNO %></td>
+      <td><%= organic_store.ITEM %></td>
+      <td><%= organic_store.QTY %></td>
+      <td><%= organic_store.PRICE %></td>
+      <td><%= organic_store.DDATE %></td>
+      <div class="container text-center">
+      <div class="row">
+      <div class="col">
+      
+      <td><%= link_to 'Show', organic_store %></td>
+      </div>
+      </div>
+      </div>
+      <td><%= link_to 'Edit', edit_organic_store_path(organic_store) %></td>
+      <td><%= link_to 'Remove', organic_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+    </tr>
+  <% end %>
+
+
+  </tbody>
+</table>
+
+<%= link_to 'Add New Products', new_organic_store_path %>
