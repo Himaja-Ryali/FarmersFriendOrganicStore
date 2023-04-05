@@ -1,8 +1,19 @@
-
-  <div class="container">
+<header>
+    <h4 style="font-family: Arial;">Welcome to our store</h4>
+    <h6 style="font-family: Arial;"><p>Please find our products information below</p></h6>    
+  </header>
+  <style>
+  h4 {text-align: center;}
+  h7 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  </style>
+  <div class="container" style="background-color:#000000;">
+      div {
+    }
   <div class="card mt-4">
     <div class="card-body">
-      <h2 class="card-title">Organic Stores</h2>
+      <h2 class="card-title" style="background-color:#33cc33; font-family: Arial;">Organic Stores</h2>
       <% if notice %>
         <p id="notice"><%= notice %></p>
       <% end %>
@@ -10,7 +21,7 @@
       <div class="table-responsive">
         <table class="table">
           <thead>
-            <tr>
+            <tr style="background-color:#ffc2b3;">
               <th scope="col">ITEM NO</th>
               <th scope="col">ITEM</th>
               <th scope="col">QUANTITY(lbs.)</th>
@@ -41,15 +52,15 @@
     </div>
   </div>
 </div>
-  
-
-<div class="container text-center mt-3">
-  <%= link_to 'Add New Product', new_organic_store_path, class: "btn btn-dark" %>
-</div>
-
-</div>
-
-  </tbody>
+  <table>
+  <div class="container text-center mt-3"  style="background-color:#000000;" >
+    <%= link_to 'Add New Product', new_organic_store_path, class: "btn btn-light" %>
+    <b> </b>
+    <div style = "position:fixed; left:620px; down:60px;">
+      <footer>
+        <p><h7>Copyright © 2023: All rights reserved.</h7></p>
+      </footer>
+    </div>
+  </div>
 </table>
-
 
