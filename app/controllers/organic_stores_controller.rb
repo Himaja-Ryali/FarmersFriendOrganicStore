@@ -67,4 +67,8 @@ class OrganicStoresController < ApplicationController
     def organic_store_params
       params.require(:organic_store).permit(:ITEMNO, :ITEM, :QTY, :PRICE, :DDATE)
     end
+def search
+  key = "%#{params[:key]}%"
+  @posts = Post.where("name LIKE ?", key)
+end
 end

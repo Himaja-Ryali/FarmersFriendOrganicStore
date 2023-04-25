@@ -91,6 +91,10 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -220,6 +224,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.1-x86_64-linux)
+    temple (0.10.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -261,7 +266,11 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+<<<<<<< HEAD
   devise
+=======
+  haml (~> 6.1, >= 6.1.1)
+>>>>>>> f6829e4 (Added search bar functionalilty)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 0.21)

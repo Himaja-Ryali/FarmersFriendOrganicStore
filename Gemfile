@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
+<<<<<<< HEAD
 gem 'rspec-rails', '~>4.0'
 
+=======
+gem 'haml', '~> 6.1', '>= 6.1.1'
+>>>>>>> f6829e4 (Added search bar functionalilty)
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
 # Use sqlite3 as the database for Active Record
